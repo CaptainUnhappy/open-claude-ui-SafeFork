@@ -1,0 +1,12 @@
+# Only a disabled registry placeholder on sync-control.
+# The upstream CI file remains unchanged on the preserved code branches.
+name: Upstream CI (disabled by SafeFork)
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  disabled:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Disabled
